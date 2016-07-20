@@ -52,7 +52,7 @@ class Rubynovice
       for a in 1..3 do
 
         print("%d,%d\n", i, a)
-        answer << "#{i}#{a}\n"
+        answer << "#{i},#{a}\n"
 
       end
     end
@@ -71,10 +71,17 @@ class Rubynovice
 
         b = i * a
         printf("%d ",b)
-        answer << "#{b}\n"
+        if b < 10 then
+          answer << "  #{b}"
+
+        elsif b >= 10 then
+          answer << " #{b}"
+
+        end
 
       end
 
+      answer << "\n"
       printf("\n")
 
     end
@@ -96,9 +103,9 @@ class Rubynovice
     end
 
     printf( "%d\n", a )
-    answer << "#{a}\n"
+    answer << a
 
-    return answer
+    return a
   end
 
   def ex2_7
@@ -115,7 +122,9 @@ class Rubynovice
     end
 
     printf( "%d\n", a )
-    answer << "#{a}\n"
+    answer << "#{a}"
+
+    return a
   end 
 
 end
