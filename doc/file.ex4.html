@@ -1,12 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   File: ex4
   
-    &mdash; Documentation by YARD 0.8.7.6
+    &mdash; Documentation by YARD 0.9.0
   
 </title>
 
@@ -15,9 +15,8 @@
   <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
+  pathId = "ex4";
   relpath = '';
-  framesUrl = "frames.html#!file.ex4.html";
 </script>
 
 
@@ -28,40 +27,39 @@
 
   </head>
   <body>
-    <div id="header">
-      <div id="menu">
+    <div class="nav_wrap">
+      <iframe id="nav" src="file_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
   
     <a href="_index.html">Index</a> &raquo; 
     <span class="title">File: ex4</span>
   
-
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-      <div id="search">
+        <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="class_list.html">
-      Class List
-    </a>
-  
-    <a class="full_list_link" id="method_list_link"
-        href="method_list.html">
-      Method List
-    </a>
-  
-    <a class="full_list_link" id="file_list_link"
-        href="file_list.html">
-      File List
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
     </a>
   
 </div>
-      <div class="clear"></div>
-    </div>
+        <div class="clear"></div>
+      </div>
 
-    <iframe id="search_frame"></iframe>
+      <iframe id="search_frame" src="file_list.html"></iframe>
 
-    <div id="content"><div id='filecontents'><h1>Ex4. if-制御(OneTwoThree)</h1>
+      <div id="content"><div id='filecontents'><h1>Ex4. if-制御(OneTwoThree)</h1>
 
 <h2>Ex4_1:1,2,3に対してOne, Two, Threeに</h2>
 
@@ -87,20 +85,54 @@ Three.
 
 <p>西暦を代入したら，明治，大正，昭和，平成で答えてくれるプログラムを作成せよ．西暦1868,1912,1926,1989年をそれぞれの元年とする．</p>
 
+<pre class="code ruby"><code class="ruby">class FileTest1 &lt; Test::Unit::TestCase
+  def test_fact
+    trial = [[1865,&#39;江戸以前&#39;],[1900,&#39;明治33&#39;],[1915,&#39;大正4&#39;],[1961,&#39;昭和36&#39;],[1998,&#39;平成10&#39;]
+    trial.each{|pair|
+      result = leap?(pair[0])
+      assert_equal result, pair[1]
+    }
+  end
+end
+</code></pre>
+
 <h2>Ex4_3:素数判定(prime_number?)</h2>
 
 <p>素数判定を原理から実現せよ．ある数nが素数かどうかは，自分自身の数nと1以外の数で割りきれないかどうかで判定される．割り算の余り(剰余)は%で求まる．2からn-1までの数でnを次々と割っていき，割り切れたところでループをbreak．最後までまわっていれば素数(prime number)と判定すればよい.</p>
 
+<pre class="code ruby"><code class="ruby"><span class='kw'>class</span> <span class='const'>Test1</span> <span class='op'>&lt;</span> <span class='const'>Test</span><span class='op'>::</span><span class='const'>Unit</span><span class='op'>::</span><span class='const'>TestCase</span>
+  <span class='kw'>def</span> <span class='id identifier rubyid_test_fact'>test_fact</span>
+    <span class='id identifier rubyid_trial'>trial</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>3</span><span class='comma'>,</span><span class='kw'>true</span><span class='rbracket'>]</span><span class='comma'>,</span><span class='lbracket'>[</span><span class='int'>4</span><span class='comma'>,</span><span class='kw'>false</span><span class='rbracket'>]</span><span class='comma'>,</span><span class='lbracket'>[</span><span class='int'>131</span><span class='comma'>,</span><span class='kw'>true</span><span class='rbracket'>]</span><span class='comma'>,</span><span class='lbracket'>[</span><span class='int'>133</span><span class='comma'>,</span><span class='kw'>false</span><span class='rbracket'>]</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_trial'>trial</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_pair'>pair</span><span class='op'>|</span>
+      <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_prime?'>prime?</span><span class='lparen'>(</span><span class='id identifier rubyid_pair'>pair</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_assert_equal'>assert_equal</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_pair'>pair</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
+    <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+</code></pre>
+
 <h2>Ex4_4:閏年(leap_year?)</h2>
 
 <p>うるう年かどうかを表示するプログラムをかけ．うるう年は4で割り切れる数の年．ただし，100で割り切れる年はうるう年でなく，400で割り切れる年はうるう年．1999,2004,1900,2000に対して，それぞれfalse,true,false,trueが返っているかをたしかめよ．</p>
+
+<pre class="code ruby"><code class="ruby"><span class='kw'>class</span> <span class='const'>FileTest1</span> <span class='op'>&lt;</span> <span class='const'>Test</span><span class='op'>::</span><span class='const'>Unit</span><span class='op'>::</span><span class='const'>TestCase</span>
+  <span class='kw'>def</span> <span class='id identifier rubyid_test_fact'>test_fact</span>
+    <span class='id identifier rubyid_trial'>trial</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1999</span><span class='comma'>,</span><span class='kw'>false</span><span class='rbracket'>]</span><span class='comma'>,</span><span class='lbracket'>[</span><span class='int'>2004</span><span class='comma'>,</span><span class='kw'>true</span><span class='rbracket'>]</span><span class='comma'>,</span><span class='lbracket'>[</span><span class='int'>1900</span><span class='comma'>,</span><span class='kw'>false</span><span class='rbracket'>]</span><span class='comma'>,</span><span class='lbracket'>[</span><span class='int'>2000</span><span class='comma'>,</span><span class='kw'>true</span><span class='rbracket'>]</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_trial'>trial</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_pair'>pair</span><span class='op'>|</span>
+      <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_leap?'>leap?</span><span class='lparen'>(</span><span class='id identifier rubyid_pair'>pair</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_assert_equal'>assert_equal</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_pair'>pair</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
+    <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+</code></pre>
 </div></div>
 
-    <div id="footer">
-  Generated on Tue May 24 12:21:24 2016 by
+      <div id="footer">
+  Generated on Thu Jul 21 14:31:41 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.2.2).
+  0.9.0 (ruby-2.2.2).
 </div>
 
+    </div>
   </body>
 </html>

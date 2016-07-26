@@ -1,5 +1,4 @@
 !Ex1. 代入および出力
-
 !!Ex1_1:hello worldを返せ．
 <<< terminal
 [bobsNewMacBook:~/Desktop/Ruby/ThreeDays] bob% ruby ex0.rb

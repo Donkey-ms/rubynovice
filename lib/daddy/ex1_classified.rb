@@ -1,4 +1,4 @@
-class Exs
+class Rubynovice
 
   def ex1_1
     return "hello world.\n"

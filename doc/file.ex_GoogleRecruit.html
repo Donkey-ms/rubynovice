@@ -1,12 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   File: ex_GoogleRecruit
   
-    &mdash; Documentation by YARD 0.8.7.6
+    &mdash; Documentation by YARD 0.9.0
   
 </title>
 
@@ -15,9 +15,8 @@
   <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
+  pathId = "ex_GoogleRecruit";
   relpath = '';
-  framesUrl = "frames.html#!file.ex_GoogleRecruit.html";
 </script>
 
 
@@ -28,40 +27,39 @@
 
   </head>
   <body>
-    <div id="header">
-      <div id="menu">
+    <div class="nav_wrap">
+      <iframe id="nav" src="file_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
   
     <a href="_index.html">Index</a> &raquo; 
     <span class="title">File: ex_GoogleRecruit</span>
   
-
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-      <div id="search">
+        <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="class_list.html">
-      Class List
-    </a>
-  
-    <a class="full_list_link" id="method_list_link"
-        href="method_list.html">
-      Method List
-    </a>
-  
-    <a class="full_list_link" id="file_list_link"
-        href="file_list.html">
-      File List
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
     </a>
   
 </div>
-      <div class="clear"></div>
-    </div>
+        <div class="clear"></div>
+      </div>
 
-    <iframe id="search_frame"></iframe>
+      <iframe id="search_frame" src="file_list.html"></iframe>
 
-    <div id="content"><div id='filecontents'><h1>課題:Google Recruit</h1>
+      <div id="content"><div id='filecontents'><h1>課題:Google Recruit</h1>
 
 <p>e(自然対数の底)の値で連続する10桁の数のうち，最初の素数をrubyで求めよ．ただし，e(自然対数の底)は200桁までで</p>
 
@@ -85,8 +83,10 @@
 
 <p>(中略)</p>
 
-<p>この広告には、「{eの値中の、最初の連続する10桁の素数}.com」(&quot;{first 10 digit prime found in consecutive digits e}.com.&quot; )と書かれている。この答えの「7427466391.com」にアクセスすると、そのウェブページにはさらに別の問題(下記参照)が用意されているが、ここにもGoogleが関与していることを示すものは全くない。 この問題を解くと、Googleの研究開発部門「Google Labs」へのページに辿りつく。このページには、「Googleの構築を通して我々が学んだことの1つに、自分が何かを探しているとき、向こうも自分を探している場合のほうが見つかりやすいということがある。我々が探しているのは、世界最高のエンジニアであり、あなたこそその人なのだ」と書かれている。</p>
+<p>この広告には、「eの値中の、最初の連続する10桁の素数.com」(&quot;10 digit prime found in consecutive digits e.com.&quot; )と書かれている。この答えの「7427466391.com」にアクセスすると、そのウェブページにはさらに別の問題(下記参照)が用意されているが、ここにもGoogleが関与していることを示すものは全くない。 この問題を解くと、Googleの研究開発部門「Google Labs」へのページに辿りつく。このページには、「Googleの構築を通して我々が学んだことの1つに、自分が何かを探しているとき、向こうも自分を探している場合のほうが見つかりやすいということがある。我々が探しているのは、世界最高のエンジニアであり、あなたこそその人なのだ」と書かれている。</p>
 </blockquote>
+
+<p><img src="GoogleRecruit.gif" alt=""></p>
 
 <h2>解法</h2>
 
@@ -100,9 +100,10 @@
 <li>10桁の整数の生成</li>
 </ol></li>
 <li>素数判定</li>
-<li>最初の連続する10桁の素数を捜す
-である．</li>
+<li>最初の連続する10桁の素数を捜す</li>
 </ol>
+
+<p>である．</p>
 
 <h2>ヒント１：expの読み込み</h2>
 
@@ -169,11 +170,12 @@ f(5)=__________
 </code></pre>
 </div></div>
 
-    <div id="footer">
-  Generated on Tue May 24 12:21:24 2016 by
+      <div id="footer">
+  Generated on Thu Jul 21 14:31:41 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.2.2).
+  0.9.0 (ruby-2.2.2).
 </div>
 
+    </div>
   </body>
 </html>

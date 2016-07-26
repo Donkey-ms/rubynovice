@@ -7,4 +7,3 @@ rescue LoadError
   p File.expand_path("../../lib/#{ENV['RUBYNOVICE_NAME']}", __FILE__)
   exit
 end
-

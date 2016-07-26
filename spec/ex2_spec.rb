@@ -6,27 +6,22 @@ describe Rubynovice do
     @rubynovice = Rubynovice.new
   end
 
-  it 'has a version number' do
-    print Rubynovice::VERSION+"\n"
-    expect(Rubynovice::VERSION).not_to be nil
-  end
-
-  it 'ex2_1 return "I love Shunkun.\n"*8', ex: 'ex2_1' do
+  it 'ex2_1 returns "I love Shunkun.\n"*8', ex: 'ex2_1' do
     expected = "I love Shunkun.\nI love Shunkun.\nI love Shunkun.\nI love Shunkun.\nI love Shunkun.\nI love Shunkun.\nI love Shunkun.\nI love Shunkun.\n"
     expect(@rubynovice.ex2_1).to eq(expected)
   end
 
-  it 'ex2_2 return "1\n..5\n"', ex: 'ex2_2' do
+  it 'ex2_2 returns "1\n..5\n"', ex: 'ex2_2' do
     expected = "1\n2\n3\n4\n5\n"
     expect(@rubynovice.ex2_2).to eq(expected)
   end
 
-  it 'ex2_3 return "10\n8\n6\n4\n2\n"', ex: 'ex2_3' do
+  it 'ex2_3 returns "10\n8\n6\n4\n2\n"', ex: 'ex2_3' do
     expected = "10\n8\n6\n4\n2\n"
     expect(@rubynovice.ex2_3).to eq(expected)
   end
 
-  it 'ex2_4 return 1,1\n..3,3\n', ex: 'ex2_4' do
+  it 'ex2_4 returns 1,1\n..3,3\n', ex: 'ex2_4' do
     expected = <<EOS
 1,1
 1,2
@@ -41,7 +36,7 @@ EOS
     expect(@rubynovice.ex2_4).to eq(expected)
   end
 
-  it 'ex2_5 return 1*1..9*9', ex: 'ex2_5' do
+  it 'ex2_5 returns 1*1..9*9', ex: 'ex2_5' do
     expected = <<EOS
   1  2  3  4  5  6  7  8  9
   2  4  6  8 10 12 14 16 18
@@ -56,12 +51,12 @@ EOS
     expect(@rubynovice.ex2_5).to eq(expected)
   end
 
-  it 'ex2_6 return sum of 1..10', ex: 'ex2_6' do
+  it 'ex2_6 returns 55 due to sum of 1..10', ex: 'ex2_6' do
     expected = 55
     expect(@rubynovice.ex2_6).to eq(expected)
   end
 
-  it 'ex2_7 return factorial of 1..10', ex: 'ex2_7' do
+  it 'ex2_7 returns 362880 due to factorial of 1..10', ex: 'ex2_7' do
     expected = 3628800
     expect(@rubynovice.ex2_7).to eq(expected)
   end

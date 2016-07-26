@@ -1,0 +1,24 @@
+!テスト駆動
+テストは，Rakefileのあるrubynoviceのdirにおいて，
+<<< tcsh
+rake spec donkey
+>>>
+とすると，ex1--ex5まで全てをtest.
+
+あるいは，ex1だけを全て(ex1_1,ex1_2,ex1_3)のチェックは，
+<<< tcsh
+(cshでは)setenv RUBYNOVICE_NAME donkey
+(bashでは）export RUBYNOVICE_NAME='donkey'
+rspec spec/ex1_spec.rb
+>>>
+でできる．さらに一つの課題だけをチェックするときは，
+<<< tcsh
+bob% rspec --tag ex:"ex1_1" spec/ex1_spec.rb
+>>>
+とする．
+
+!解答記述
+変数に出力として"ans=2\n"などを代入してprintfで出力させて，
+その変数をreturnするようにするとprintfの使い方とあわせて
+テスト駆動させている感じにみえる．rake時に緑字だけでなく，printfの出力についても確認．
+

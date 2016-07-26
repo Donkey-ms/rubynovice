@@ -16,6 +16,36 @@ i番目の素数を返す関数ithprimeをつくれ.
 3 が終了 0  0 [0] 1 0 1 0 1 1 1  ...  1  1   1  
 >>>
 
+!双子素数(twin_primes)
+pも素数で，p+2も素数の時，これらを双子素数という．1から100までの双子素数を探せ．
+<<< ruby
+class Integer
+  def prime?
+      #    p self
+      nmax=Math.sqrt(self).to_i
+      for i in 2..nmax do
+      if self%i==0 then
+#        p i
+        return false
+      end
+    end
+    return true
+  end
+end
+
+p 13.prime?
+p 113.prime?
+p 131.prime?
+p 133.prime?
+
+def twin_primes
+  101.times{|i|
+    print i,",",i+2,"\n" if (i.prime? and (i+2).prime?)
+  }
+end
+
+twin_primes
+>>>
 !メルセンヌ数
 n = 257 までのメルセンヌ数 (Mn = 2^n − 1) で,素数であるときの n を表示
 するプログラムをつくれ.答えは,
@@ -47,6 +77,34 @@ n = 2,3,5,7,13,17,19,31,61,89,107,127 だけであることを確かめよ.素�
 更に n!! +1 若しくは n!! +1 の形の素数を多階乗素数と言う。 n!!! +1 若しくは n!!! +1 等々も考えられている。 因みに n!! = n(n-2)(n-4)… 、n!!! = n(n-3)(n-6)…
 :参考文献:[好田] 好田順治,『素数の不思議』, 現代数学社, 1999.
 
+<<< ruby
+class Integer
+  def prime?
+      #    p self
+      nmax=Math.sqrt(self).to_i
+      for i in 2..nmax do
+      if self%i==0 then
+#        p i
+        return false
+      end
+    end
+    return true
+  end
+end
+
+p 13.prime?
+p 113.prime?
+p 131.prime?
+p 133.prime?
+
+def twin_primes
+  101.times{|i|
+    print i,",",i+2,"\n" if (i.prime? and (i+2).prime?)
+  }
+end
+
+twin_primes
+>>>
 <<< ruby
 for p from 1 to 100 do
   if (isprime(p) and isprime(2*p+1)) then

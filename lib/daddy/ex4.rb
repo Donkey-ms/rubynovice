@@ -57,3 +57,21 @@ a.each{|year|
     p 'non leap yaer'
   end
 }
+
+a = [1999,2004,1900,2000]
+a.each{|year|
+  if year%4==0 then
+    if year%100==0 then
+      if year%400==0
+        p 'true'
+      else
+        p 'false'
+      end
+    else
+      p 'true'
+    end
+  else
+    p 'false'
+  end
+}
+

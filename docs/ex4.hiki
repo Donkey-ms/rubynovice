@@ -1,11 +1,11 @@
 !Ex4. if-制御(OneTwoThree)
 !!Ex4_1:1,2,3に対してOne, Two, Threeに
-<<<
+<<< ruby
 One.
 Two.
 Three.
 >>>
-<<<
+<<< ruby
 a=[1,2,3]
 for i in 0..2 do
   tmp=a[i]
@@ -20,9 +20,40 @@ end
 >>>
 !!Ex4_2:西暦(AD2Wareki)
 西暦を代入したら，明治，大正，昭和，平成で答えてくれるプログラムを作成せよ．西暦1868,1912,1926,1989年をそれぞれの元年とする．
-
+<<< ruby
+class FileTest1 < Test::Unit::TestCase
+  def test_fact
+    trial = [[1865,'江戸以前'],[1900,'明治33'],[1915,'大正4'],[1961,'昭和36'],[1998,'平成10']
+    trial.each{|pair|
+      result = leap?(pair[0])
+      assert_equal result, pair[1]
+    }
+  end
+end
+>>>
 !!Ex4_3:素数判定(prime_number?)
 素数判定を原理から実現せよ．ある数nが素数かどうかは，自分自身の数nと1以外の数で割りきれないかどうかで判定される．割り算の余り(剰余)は%で求まる．2からn-1までの数でnを次々と割っていき，割り切れたところでループをbreak．最後までまわっていれば素数(prime number)と判定すればよい.
-
+<<< ruby
+class Test1 < Test::Unit::TestCase
+  def test_fact
+    trial = [[3,true],[4,false],[131,true],[133,false]]
+    trial.each{|pair|
+      result = prime?(pair[0])
+      assert_equal result, pair[1]
+    }
+  end
+end
+>>>
 !!Ex4_4:閏年(leap_year?)
 うるう年かどうかを表示するプログラムをかけ．うるう年は4で割り切れる数の年．ただし，100で割り切れる年はうるう年でなく，400で割り切れる年はうるう年．1999,2004,1900,2000に対して，それぞれfalse,true,false,trueが返っているかをたしかめよ．
+<<< ruby
+class FileTest1 < Test::Unit::TestCase
+  def test_fact
+    trial = [[1999,false],[2004,true],[1900,false],[2000,true]]
+    trial.each{|pair|
+      result = leap?(pair[0])
+      assert_equal result, pair[1]
+    }
+  end
+end
+>>>

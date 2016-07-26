@@ -12,11 +12,14 @@ task :yard do
   files.each{|file|
     name=file.split('.')
     if name[1]=='hiki' then
-      p command="hiki2md docs/#{name[0]}.hiki > docs/#{name[0]}.md"
+      p command="hiki2md docs/#{name[0]}.hiki > rubynovice.wiki/#{name[0]}.md"
       system command
     end
   }
-  system "cp docs/README_ja.md README.md"
+  system "cp rubynovice.wiki/README_ja.md README.md"
+  system "cp rubynovice.wiki/README_ja.md rubynovice.wiki/Home.md"
+  system "cp docs/*.gif rubynovice.wiki"
+  system "cp docs/*.gif doc"
   YARD::Rake::YardocTask.new
 end
 
@@ -27,6 +30,8 @@ task :spec do
     ENV['RUBYNOVICE_NAME']=name
     RSpec::Core::RakeTask.new(:spec)
   else
+    p "specify directory name as \'rake spec hogehoge\'."
+=begin
     escape = [".", "..", "rubynovice", "rubynovice.rb", "rubynovice.rb~"]
     p dirs=Dir.entries('lib')
     dirs.each{|dir|
@@ -37,6 +42,7 @@ task :spec do
         test = nil
       end
     }
+=end
   end
 end
 
