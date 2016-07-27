@@ -16,7 +16,7 @@ p a
 
 #ex3_3
 srand(0)
-dice=[]
+dice=Array.new(7,0)
 100.times do
   i=rand(6)+1
   dice[i]+=1
@@ -33,7 +33,26 @@ num=[]
   num << b
   a=a*10-b
 }
-p num
-
+p  num
 
 #ex3_5
+srand(0)
+p a=rand()
+num=[]
+10.times{
+  b=(a*10).to_i
+  num << b
+  a=a*10-b
+}
+p num
+j=0
+answer=0
+10.times{
+  answer=answer*10+num[j]
+  j+=1
+}
+printf("%d\n",answer)
+
+
+
+

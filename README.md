@@ -9,7 +9,9 @@ Ruby programming mastering platform using Github.
 - 自分のPCにcloneする
 
 ## 使用法
-- 自分の好きな名前(daddy)をつけたディレクトリーを作り"./lib/daddy/ex_files.rb"を準備．
+- 自分の好きな名前(daddy)をつけたディレクトリーを作る．
+- "./lib/daddy/ex_files.rb"を準備
+- ex_files.rbにrequire "ex1"を書く
 - class Rubynoviceに解答を保存していく．
 - 書き方は./lib/daddy/ex1_classified.rbを参照のこと．
 - rspecで，個人ごとの検査を実行するには

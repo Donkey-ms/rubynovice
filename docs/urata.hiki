@@ -1,0 +1,37 @@
+! 目的
+rubynoviceで初心者が一からやっていった時に，分かりやすいように．
+プログラムが作りやすいように改善していく．
+
+specify(具体的に説明する) specification(性能,特徴,特性)
+specific(特徴的な)
+
+rubynoviceとは，ruby初心者が，「rubyでprogrammingするときの作法」を習得するためのツールである．
+
+* sh, editorの操作法
+* rubyの文法
+* rubyの作法
+
+!!学習，習得
+
+||剣道のお稽古||作法(gem)，立ち居振る舞い(github)，技(ruby)，試合(rspec)
+||厨房のアルバイト||教えてくれる人，メモ，仕事，
+||rubynovice||github(version管理，進捗確認), rspec(test駆動), gem(フレーム枠組み，決まり事，)
+
+! ruby言語の問題
+
+# C言語ではfor-loopの範囲がrubyでは確定していないため，不安
+
+! rspecがめんどう
+# 
+
+! gitは使える? 
+
+! terminalあるいはCGIの操作
+
+# emacsとrspec
+# コマンド起動pathの重要性
+# directory pathの指定方法
+
+! emacsエディターの便利な点
+
+#end位置のauto indentation.
