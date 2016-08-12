@@ -35,3 +35,12 @@ rubynoviceとは，ruby初心者が，「rubyでprogrammingするときの作法
 ! emacsエディターの便利な点
 
 #end位置のauto indentation.
+
+!西谷コメント(2016/07/28)
+* rspecがやっぱりきつい．オブジェクトに対するunit testだから．
+** 短いプログラムに対するunit testにできないか？
+** checkを曖昧に出来ないか?
+* all greenは気持ちいいし，editorで治すのがpattern化するというのもprogrammingのキホン．
+
+defレベルでのテストは，unit/testでできる．spec/testに例を紹介．
+*[[MinitestとRSpec、FixturesとFactoryGirlの良いところ悪いところをコードを書いて比較してみた|http://blog.jnito.com/entry/2015/05/06/074510]]は役に立つ記述がたくさん．rspecを捨ててminitestも悪くない気がしてくる．

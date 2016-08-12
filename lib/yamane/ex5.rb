@@ -32,6 +32,7 @@ class Rubynovice
    end
 
    def my_distance(a,b)
+<<<<<<< HEAD
     m=(a[0]-b[0])*(a[0]-b[0])+(a[1]-b[1])*(a[1]-b[1])
 
     return Math::sqrt(m)
@@ -47,6 +48,22 @@ class Rubynovice
 
        m=n1+n2+n3+n4
        return m
+=======
+     dx=a[0]-b[0]
+     dy=a[1]-b[1]
+     return Math::sqrt(dx*dx+dy*dy)
+   end
+
+
+    def DistanceSum(route,city_pos)
+      sum=0.0
+      4.times{|i|
+        a = city_pos[route[i]]
+        b = city_pos[route[i+1]]
+        sum += my_distance(a,b)
+      }
+      return sum
+>>>>>>> 7ea2e9bc7136b32d9c91772376fd04e6ac4b8fbc
     end
 
 end

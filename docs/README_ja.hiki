@@ -19,6 +19,8 @@ Ruby programming mastering platform using Github.
 *** (csh,tcsh)setenv RUBYNOVICE_NAME daddy
 *** (bash,zsh)export RUBYNOVICE_NAME=daddy
 ** rspec spec/ex2_spec.rb
+** 失敗したとこで止める
+*** 'rspec spec/ex2_spec.rb  --fail-fast'
 *** rake spec hogehogeとかでもOKだが動作不安定．
 *** 複数の検査を一度に処理しようとするときに前のclassが生き残っている？
 
