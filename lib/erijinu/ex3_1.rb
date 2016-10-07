@@ -28,6 +28,7 @@ class Rubynovice
       dice[i] += 1
     end
     return dice
+
   end
 
   def ex3_4
@@ -42,4 +43,22 @@ class Rubynovice
     p num
   end
 
+  def ex3_5
+    p a
+    num=[]
+    10.times{
+      b=(a*10).to_i
+      num << b
+      a=a*10-b
+    }
+    p num
+    j=0
+    answer=0
+    10.times{
+      answer=answer*10+num[j]
+      j+=1
+    }
+    printf("%d\n",answer)
+    
+  end
 end

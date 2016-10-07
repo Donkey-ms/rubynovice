@@ -12,11 +12,10 @@ class Rubynovice
   end
 
   def ex2_2
-    
     answer = ""
     for i in 1..5 do
       answer <<  "#{i}\n"
-      
+
     end
 
     return answer
@@ -24,17 +23,16 @@ class Rubynovice
   end
 
   def ex2_3
-      
+
     a = 10
     answer = ""
 
-    while a >= 2 do
 
-     
+    while a >= 2 do
       answer << "#{a}\n"
-      
+
       a = a - 2
-        
+
     end
 
     return answer
@@ -87,13 +85,11 @@ class Rubynovice
     end
 
     return answer
-
-  end 
+  end
 
   def ex2_6
 
     answer = ""
-
     i = 1
     a = 0
     for i in 1..10 do
@@ -103,7 +99,9 @@ class Rubynovice
     end
 
     printf( "%d\n", a )
-    answer << a
+
+    answer << "#{a}\n"
+
 
     return a
   end
@@ -115,17 +113,18 @@ class Rubynovice
     answer = ""
 
     for i in 1..10 do
-      
       a = a * i
 
-      
     end
 
     printf( "%d\n", a )
+
     answer << "#{a}"
 
     return a
   end 
+
+
 
 end
 #Rubynovice.new.ex2_1
@@ -135,3 +134,4 @@ end
 #Rubynovice.new.ex2_5
 #Rubynovice.new.ex2_6
 #Rubynovice.new.ex2_7
+

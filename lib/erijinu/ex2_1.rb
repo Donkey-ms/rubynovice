@@ -44,8 +44,10 @@ class Rubynovice
       for j in 1..9 do
         ans=i*j
         printf("%3d",ans)
+
 #        text << "#{ans}"
         text << sprintf("%3d",ans)
+
       end
       printf("\n")
       text << "\n"
@@ -59,7 +61,9 @@ class Rubynovice
       total=total+i
     end
     p total
+
     return total
+
   end
 
   def ex2_7
@@ -69,7 +73,9 @@ class Rubynovice
       ans=ans*(i+1)
     end
     p ans
+
     return ans
+
   end
 
 end
