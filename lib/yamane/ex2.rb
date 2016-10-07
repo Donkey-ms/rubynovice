@@ -7,22 +7,27 @@ class Rubynovice
      end
     return answer
   end
+
   def ex2_2
-     answer=""
+    answer=""
     for i in 1..5 do
        puts i
       answer << "#{i}\n"
      end
-    return answer
+     p answer
+     return answer
   end
+
   def ex2_3
      i=12
      answer=""
      while i>2 do
        i-=2
+
        puts i
        answer << "#{i}\n"
      end
+     p answer
      return answer
   end
 
@@ -30,22 +35,28 @@ class Rubynovice
     answer="" 
     3.times{|i|
       3.times{|j|
-        # printf("%d,%d\n",i+1,j+1)
+       #  printf("%d,%d\n",i+1,j+1)
          answer << "#{i+1},#{j+1}\n"
       }
     }
-#    p answer
+ #  p answer
     return answer
   end
 
   def ex2_5
+     answer=""
      for i in 1..9 do
         for j in 1..9 do
            a=i*j
            printf("%3d",a)
-         end
-         printf("\n")
+           text=sprintf("%3d",a)
+           answer << text
+        end
+        printf("\n")
+        answer << "\n"
       end
+      p answer
+      return answer 
   end
 
   def ex2_6
@@ -54,14 +65,18 @@ class Rubynovice
         sum+=i
      end
      puts sum
+     return sum
   end
+
   def ex2_7
      sum=1
      for i in 1..10 do
         sum*=i
      end
      puts sum
+     return sum
   end
+
 end
   
   

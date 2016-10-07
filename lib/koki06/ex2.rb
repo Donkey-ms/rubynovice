@@ -1,4 +1,3 @@
-
 class Rubynovice
 
   def ex2_1
@@ -89,3 +88,4 @@ class Rubynovice
   end
   
 end
+
